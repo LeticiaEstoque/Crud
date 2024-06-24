@@ -1,9 +1,9 @@
 <?php
 
-$severname = "localhost";
+$severname = "Localhost";
 $username = "root";
 $password = "root";
-$database = "crud_php";
+$database = "motos";
 
 $conexao = mysqli_connect($severname, $username, $password, $database);
 

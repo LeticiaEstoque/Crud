@@ -24,31 +24,31 @@ $id = $_GET['id'];
     </head>
     <body>
         <div class="container" id="tamanhoContainer" style="margin-top: 40px;">
-            <h4>Série</h4>
+            <h4>Modelo</h4>
             
                 <?php
 
-                $sql = "SELECT * FROM `series` WHERE id = $id";
+                $sql = "SELECT * FROM `cadastrar_motos` WHERE id = $id";
                 $busca = mysqli_query($conexao, $sql);
 
                 while ($array = mysqli_fetch_array($busca)){
                     $id = $array['id'];
-                    $nome = $array['nome'];
-                    $temporadas = $array['temporadas'];
-                    $genero = $array['genero'];
-                    $assistir = $array['assistir'];
+                    $modelo = $array['modelo'];
+                    $cilindrada = $array['cilindrada'];
+                    $marca = $array['marca'];
+                    $cor = $array['cor'];
                     $ano = $array['ano'];
 
                 ?>
 
-                Nome: <?php echo $nome; ?> <br/>
-                Temporadas: <?php echo $temporadas; ?> <br/>
-                Gênero: <?php echo $genero; ?> <br/>
-                Assistir: <?php echo $assistir; ?> <br/>
+                Modelo: <?php echo $modelo; ?> <br/>
+                Cilindrada: <?php echo $cilindrada; ?> <br/>
+                Marca: <?php echo $marca; ?> <br/>
+                Cor: <?php echo $cor; ?> <br/>
                 Ano: <?php echo $ano; ?>
                 
                 <div style="text-align: right;">
-                <a href="visualizar_series.php" role="button" class="btn btn-primary btn-sm">Voltar</a>
+                <a href="visualizar_modelo.php" role="button" class="btn btn-Secondary btn-sm">Voltar</a>
                 </div>
                 <?php } ?>
         </div>  

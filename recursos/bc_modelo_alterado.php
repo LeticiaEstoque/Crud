@@ -23,34 +23,34 @@
         <br/>
 
         <div class="alert alert-sucess alert-dismissible fade show" role="alert">
-                <strong>Produto alterado com sucesso!</strong>
+                <strong>Informações alteradas com sucesso!</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
-        <a href="../index.php" role="button" class="btn btn-primary btn-sm">Voltar</a>
+        <a href="../index.php" role="button" class="btn btn-Secondary btn-sm">Voltar</a>
     
             <table class="table table-striped table-hover">
             <thead>
               <tr>
-                <th scope="col">Nome da série</th>
-                <th scope="col">Número de temporadas</th>
-                <th scope="col">Gênero</th>
-                <th scope="col">Assistir</th>
-                <th scope="col">Ano de lançamento</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Cilindrada</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Cor</th>
+                <th scope="col">Ano</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <?php
-                $sql = "SELECT * FROM `series`";
+                $sql = "SELECT * FROM `cadastrar_motos`";
                 $busca = mysqli_query($conexao, $sql);
 
                 while ($array = mysqli_fetch_array($busca)){
                   $id = $array['id'];
-                  $nome = $array['nome'];
-                  $temporadas = $array['temporadas'];
-                  $genero = $array['genero'];
-                  $assistir = $array['assistir'];
+                  $modelo = $array['modelo'];
+                  $cilindrada = $array['cilindrada'];
+                  $marca = $array['marca'];
+                  $cor = $array['cor'];
                   $ano = $array['ano'];
 
               
@@ -59,16 +59,16 @@
                 ?>
 
                 <tr>
-                <td><?php echo $nome; ?></td>
-                <td><?php echo $temporadas; ?></td>
-                <td><?php echo $genero; ?></td>
-                <td><?php echo $assistir; ?></td>
+                <td><?php echo $modelo; ?></td>
+                <td><?php echo $cilindrada; ?></td>
+                <td><?php echo $marca; ?></td>
+                <td><?php echo $cor; ?></td>
                 <td><?php echo $ano; ?></td>
                 
 
                 
                 <td>
-                    <a class="btn btn-warning btn-sm" href="../editar_series.php?id=<?php echo $id ?>" role="button"><i class="fa-regular fa-pen-to-square"></i>&nbsp;Editar</a>
+                    <a class="btn btn-warning btn-sm" href="../editar_modelo.php?id=<?php echo $id ?>" role="button"><i class="fa-regular fa-pen-to-square"></i>&nbsp;Editar</a>
                     <a class="btn btn-primary btn-sm" href="../visualizar_unico.php?id=<?php echo $id ?>" role="button"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;Visualizar</a>
                     <a class="btn btn-outline-danger btn-sm" href="#" role="button"><i class="fa-regular fa-trash-can"></i>&nbsp;Excluir</a>
                 </td>

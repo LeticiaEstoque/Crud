@@ -19,26 +19,21 @@
      
     <div class="container" style="margin-top: 100px;">
 
-        <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Adicionar série</h5>
-                <p class="card-text">Opção para adicionar series em nossa lista.</p>
-                <a href="cadastrar_series.php" class="btn btn-primary">Cadastrar Série</a>
-            </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Lista de Séries</h5>
-                <p class="card-text">Visualizar, editar e excluir os itens.</p>
-                <a href="visualizar_series.php" class="btn btn-primary">Séries</a>
-            </div>
-            </div>
-        </div>
-        </div>
+    <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Motos</div>
+  <div class="card-body">
+    <h5 class="card-title">Adicionar modelo</h5>
+    <p class="card-text">Opção para adicionar seu modelo de moto favorita em nossa lista.</p>
+    <a href="cadastrar_modelo.php" class="btn btn-light">Cadastrar</a>
+  </div>
+</div>
+<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Lista de motos</div>
+  <div class="card-body">
+    <h5 class="card-title">Sua lista</h5>
+    <p class="card-text">Visualizar, editar e excluir os modelos.</p>
+    <a href="visualizar_modelo.php" class="btn btn-light">Motos</a>
+  </div>
 
     </div>
     
